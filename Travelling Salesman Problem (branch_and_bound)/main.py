@@ -50,9 +50,7 @@ if __name__ == '__main__':
     starter_city = 1 #<-- cidade inicial
 
     visited = [starter_city]
-    cities = [i for i in range(len(distances))]
-    cities = cities[:starter_city ] + cities[starter_city +1:]
-    print(cities)
+    cities = [i for i in range(len(distances)) if i != starter_city]
     bound = sys.maxsize
     start_node = Node(starter_city , 0, cities)
 
